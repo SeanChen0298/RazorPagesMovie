@@ -13,13 +13,13 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection(); 
-app.UseStaticFiles();
+app.UseHttpsRedirection();  //Redirects HTTP request to HTTPS.
+app.UseStaticFiles();       //Enable static files to be served. (HTML, CSS, Javascript)
 
-app.UseRouting();
+app.UseRouting();           //Add route matching to the middleware pipeline.
 
-app.UseAuthorization();
+app.UseAuthorization();     //Authorizes a user to access secure resources.
 
-app.MapRazorPages();
+app.MapRazorPages();        //Configures endpoint routing for Razor Pages.
 
 app.Run();
